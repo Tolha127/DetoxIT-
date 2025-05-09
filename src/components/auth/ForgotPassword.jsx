@@ -14,9 +14,8 @@ const ForgotPassword = () => {
     // Show success message
     setSubmitted(true);
   };  return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 pt-12">
-      {/* Header with gradient */}
-      <div className="w-full bg-gradient-to-r from-green-500 to-blue-500 p-8 mb-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 pt-12">      {/* Header with gradient */}
+      <div className="w-full bg-gradient-to-r from-teal-500 to-blue-500 p-8 mb-6 shadow-md">
         <div className="max-w-md mx-auto text-center text-white">
           <h1 className="text-3xl font-bold">Reset Your Password</h1>
           <p className="mt-2">We'll help you get back into your account</p>
@@ -33,14 +32,13 @@ const ForgotPassword = () => {
             </p>
           </div>
 
-        {submitted ? (
-          <div className="rounded-md bg-green-50 p-4">
+        {submitted ? (          <div className="rounded-md bg-teal-50 p-4">
             <div className="flex">
               <div className="ml-3">
-                <h3 className="text-sm font-medium text-green-800">
+                <h3 className="text-sm font-medium text-teal-800">
                   Reset link sent
                 </h3>
-                <div className="mt-2 text-sm text-green-700">
+                <div className="mt-2 text-sm text-teal-700">
                   <p>
                     If an account exists with this email, you will receive a password reset link. 
                     Please check your inbox.
@@ -49,7 +47,7 @@ const ForgotPassword = () => {
                 <div className="mt-4">
                   <Link
                     to="/login"
-                    className="text-sm font-medium text-green-600 hover:text-green-500"
+                    className="text-sm font-medium text-teal-600 hover:text-teal-500"
                   >
                     Return to login
                   </Link>
@@ -67,8 +65,7 @@ const ForgotPassword = () => {
                 id="email"
                 name="email"
                 type="email"
-                required
-                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
+                required                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-teal-500 focus:border-teal-500 focus:z-10 sm:text-sm"
                 placeholder="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -85,13 +82,12 @@ const ForgotPassword = () => {
               </Button>
             </div>
 
-            <div className="text-center">
-              <Link
+            <div className="text-center">              <Link
                 to="/login"
-                className="text-sm font-medium text-green-600 hover:text-green-500"
+                className="text-sm font-medium text-teal-600 hover:text-teal-500"
               >
                 Back to login
-              </Link>            </div>
+              </Link></div>
           </form>
         )}
         </div>

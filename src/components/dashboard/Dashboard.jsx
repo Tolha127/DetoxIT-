@@ -154,9 +154,8 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="pt-12 pb-16">
-      {/* Header with gradient */}
-      <div className="w-full bg-gradient-to-r from-green-600 to-blue-600 py-10 mb-8 -mx-4 sm:-mx-6 lg:-mx-8 shadow-lg">
+    <div className="pt-12 pb-16">      {/* Header with gradient */}
+      <div className="w-full bg-gradient-to-r from-teal-600 to-blue-600 py-10 mb-8 -mx-4 sm:-mx-6 lg:-mx-8 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div className="flex items-center">
@@ -192,11 +191,10 @@ const Dashboard = () => {
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                onClick={() => setActiveTab(tab.id)}                className={`flex items-center px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
                   activeTab === tab.id
-                    ? 'bg-white text-green-700 shadow'
-                    : 'text-gray-700 hover:text-green-700'
+                    ? 'bg-white text-teal-700 shadow'
+                    : 'text-gray-700 hover:text-teal-700'
                 } mr-1 last:mr-0`}
               >
                 <span className="mr-1.5">{tab.icon}</span>
@@ -241,15 +239,13 @@ const Dashboard = () => {
                   Quick Actions
                 </h2>
               </div>
-              <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <Link to="/donate">
-                  <div className="border border-green-200 bg-green-50 hover:bg-green-100 transition-colors rounded-lg p-4 text-center cursor-pointer">
+              <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">                <Link to="/donate">
+                  <div className="border border-teal-200 bg-teal-50 hover:bg-teal-100 transition-colors rounded-lg p-4 text-center cursor-pointer">
                     <div className="text-4xl mb-2">🎁</div>
-                    <h3 className="font-medium text-green-800">Donate a Device</h3>
-                    <p className="text-sm text-green-600 mt-1">Share tech with others</p>
+                    <h3 className="font-medium text-teal-800">Donate a Device</h3>
+                    <p className="text-sm text-teal-600 mt-1">Share tech with others</p>
                   </div>
-                </Link>
-                <Link to="/request">
+                </Link>                <Link to="/request">
                   <div className="border border-blue-200 bg-blue-50 hover:bg-blue-100 transition-colors rounded-lg p-4 text-center cursor-pointer">
                     <div className="text-4xl mb-2">📋</div>
                     <h3 className="font-medium text-blue-800">Request a Device</h3>
@@ -446,49 +442,45 @@ const Dashboard = () => {
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Full Name
-                      </label>
-                      <input
+                      </label>                      <input
                         type="text"
                         name="fullName"
                         value={profileData.fullName}
                         onChange={handleProfileChange}
-                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Email Address
-                      </label>
-                      <input
+                      </label>                      <input
                         type="email"
                         name="email"
                         value={profileData.email}
                         onChange={handleProfileChange}
-                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Phone Number
-                      </label>
-                      <input
+                      </label>                      <input
                         type="text"
                         name="phone"
                         value={profileData.phone}
                         onChange={handleProfileChange}
-                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Location
-                      </label>
-                      <input
+                      </label>                      <input
                         type="text"
                         name="location"
                         value={profileData.location}
                         onChange={handleProfileChange}
-                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                       />
                     </div>
                   </div>
@@ -501,7 +493,7 @@ const Dashboard = () => {
                           type="checkbox"
                           checked={profileData.notifications}
                           onChange={handleProfileChange}
-                          className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                          className="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded"
                         />
                         <label htmlFor="notifications" className="ml-2 block text-sm text-gray-900">
                           Receive email notifications for matches and updates
@@ -522,34 +514,31 @@ const Dashboard = () => {
                   <h2 className="text-lg font-semibold text-gray-800">Account Security</h2>
                 </div>
                 <div className="p-6">
-                  <div className="space-y-6">
-                    <div>
+                  <div className="space-y-6">                    <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Current Password
                       </label>
                       <input
                         type="password"
-                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                         placeholder="••••••••••"
                       />
-                    </div>
-                    <div>
+                    </div>                    <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         New Password
                       </label>
                       <input
                         type="password"
-                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                         placeholder="••••••••••"
                       />
-                    </div>
-                    <div>
+                    </div>                    <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Confirm New Password
                       </label>
                       <input
                         type="password"
-                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                        className="w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                         placeholder="••••••••••"
                       />
                     </div>

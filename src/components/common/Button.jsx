@@ -11,11 +11,10 @@ const Button = ({
   disabled = false,
 }) => {
   const baseStyles = 'px-4 py-2 rounded-md font-medium transition-colors duration-200';
-  
-  const variants = {
-    primary: 'bg-green-600 text-white hover:bg-green-700 focus:ring-2 focus:ring-offset-2 focus:ring-green-500',
-    secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-2 focus:ring-offset-2 focus:ring-gray-500',
-    outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-2 focus:ring-offset-2 focus:ring-green-500',
+    const variants = {
+    primary: 'bg-gradient-to-r from-teal-500 to-blue-500 text-white hover:from-teal-600 hover:to-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 shadow-sm',
+    secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 shadow-sm',
+    outline: 'border border-teal-500 text-teal-600 hover:bg-teal-50 focus:ring-2 focus:ring-offset-2 focus:ring-teal-500',
   };
 
   const buttonStyles = `${baseStyles} ${variants[variant]} ${className} ${

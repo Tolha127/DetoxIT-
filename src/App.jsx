@@ -15,16 +15,19 @@ import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import FAQ from './components/pages/FAQ';
 import Privacy from './components/pages/Privacy';
+import ImpactCalculator from './components/impact/ImpactCalculator';
+import DeviceMatching from './components/matching/DeviceMatching';
+import DeviceDiagnostics from './components/diagnostics/DeviceDiagnostics';
+import ResourceHub from './components/education/ResourceHub';
+import CommunityMarketplace from './components/marketplace/CommunityMarketplace';
 
 function App() {
-  return (
-    <Router>
+  return (    <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow pt-16">
           <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/catalog" element={<DeviceCatalog />} />
+            <Route path="/" element={<Homepage />} />            <Route path="/catalog" element={<DeviceCatalog />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -35,6 +38,11 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/impact" element={<ImpactCalculator />} />
+            <Route path="/matching" element={<DeviceMatching />} />
+            <Route path="/diagnostics" element={<DeviceDiagnostics />} />
+            <Route path="/resources" element={<ResourceHub />} />
+            <Route path="/marketplace" element={<CommunityMarketplace />} />
           </Routes>
         </main>
         <Footer />

@@ -59,8 +59,7 @@ const SignUp = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 pt-12">
-    {/* Header with gradient */}
-      <div className="w-full bg-gradient-to-r from-green-500 to-blue-500 p-8 mb-6">
+    {/* Header with gradient */}      <div className="w-full bg-gradient-to-r from-teal-500 to-blue-500 p-8 mb-6 shadow-md">
         <div className="max-w-md mx-auto text-center text-white">
           <h1 className="text-3xl font-bold">Join DetoxIT</h1>
           <p className="mt-2">Be part of the electronic recycling revolution</p>
@@ -91,8 +90,7 @@ const SignUp = () => {
                   id="name"
                   name="name"
                   type="text"
-                  required
-                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                  required                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                   placeholder="John Doe"
                   value={formData.name}
                   onChange={handleChange}
@@ -115,8 +113,7 @@ const SignUp = () => {
                   id="email"
                   name="email"
                   type="email"
-                  required
-                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                  required                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                   placeholder="you@example.com"
                   value={formData.email}
                   onChange={handleChange}
@@ -138,8 +135,7 @@ const SignUp = () => {
                   id="password"
                   name="password"
                   type="password"
-                  required
-                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                  required                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                   placeholder="••••••••"
                   value={formData.password}
                   onChange={handleChange}
@@ -162,8 +158,7 @@ const SignUp = () => {
                   id="confirmPassword"
                   name="confirmPassword"
                   type="password"
-                  required
-                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                  required                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                   placeholder="••••••••"
                   value={formData.confirmPassword}
                   onChange={handleChange}
@@ -185,10 +180,9 @@ const SignUp = () => {
             <div className="flex items-center justify-center mt-4">
               <div className="text-sm">
                 <p className="text-gray-600">
-                  Already have an account?{' '}
-                  <Link
+                  Already have an account?{' '}                  <Link
                     to="/login"
-                    className="font-medium text-green-600 hover:text-green-500"
+                    className="font-medium text-teal-600 hover:text-teal-500"
                   >
                     Sign in
                   </Link>
@@ -199,12 +193,11 @@ const SignUp = () => {
 
           <div className="px-8 py-4 bg-gray-50 border-t border-gray-100 text-center">
             <p className="text-xs text-gray-600">
-              By signing up, you agree to our{' '}
-              <a href="#" className="font-medium text-green-600 hover:text-green-500">
+              By signing up, you agree to our{' '}              <a href="#" className="font-medium text-teal-600 hover:text-teal-500">
                 Terms of Service
               </a>{' '}
               and{' '}
-              <a href="#" className="font-medium text-green-600 hover:text-green-500">
+              <a href="#" className="font-medium text-teal-600 hover:text-teal-500">
                 Privacy Policy
               </a>
             </p>

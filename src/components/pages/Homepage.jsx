@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import Button from '../common/Button';
 import Card from '../common/Card';
 
-const Homepage = () => {
-  const features = [
+const Homepage = () => {  const features = [
     {
       title: 'Donate Devices',
       description: 'Give your old electronics a new purpose and help bridge the digital divide.',
@@ -23,6 +22,44 @@ const Homepage = () => {
       description: 'See exactly how your contributions reduce e-waste and help communities thrive.',
       icon: '📊',
       color: 'bg-purple-100',
+    },
+  ];
+  
+  const newFeatures = [
+    {
+      title: 'Environmental Impact Calculator',
+      description: 'Quantify your contribution to sustainability with our interactive calculator.',
+      icon: '🌱',
+      color: 'bg-green-100',
+      link: '/impact'
+    },
+    {
+      title: 'Smart Device Matching',
+      description: 'Our intelligent algorithm matches donors with the perfect recipients based on needs and specifications.',
+      icon: '🔄',
+      color: 'bg-blue-100',
+      link: '/matching'
+    },
+    {
+      title: 'Device Diagnostics',
+      description: 'Check the health of your device and get recommendations for repair, reuse, or recycling.',
+      icon: '🔧',
+      color: 'bg-yellow-100',
+      link: '/diagnostics'
+    },
+    {
+      title: 'E-Waste Education Hub',
+      description: 'Learn about proper e-waste disposal and the environmental impact of electronic devices.',
+      icon: '📚',
+      color: 'bg-purple-100',
+      link: '/resources'
+    },
+    {
+      title: 'Community Marketplace',
+      description: 'Buy, sell, or trade electronic parts within our trusted community marketplace.',
+      icon: '🛒',
+      color: 'bg-red-100',
+      link: '/marketplace'
     },
   ];
 
@@ -96,9 +133,7 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Features Section with Enhanced Cards */}
+      </section>      {/* Features Section with Enhanced Cards */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -145,10 +180,83 @@ const Homepage = () => {
             ))}
           </div>
         </div>
+      </section>      {/* Featured Services Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold tracking-wide mb-3">
+              NEW FEATURES
+            </span>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Innovative Solutions for E-Waste</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our full suite of tools designed to make technology recycling more efficient and impactful.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {newFeatures.map((feature, index) => (
+              <Link to={feature.link} key={index} className="transform transition-transform hover:-translate-y-2">
+                <Card elevated={true}>
+                  <div className="text-center p-8">
+                    <div className={`text-4xl mb-6 mx-auto w-16 h-16 flex items-center justify-center rounded-full ${feature.color}`}>
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                    <p className="text-gray-600 mb-4">{feature.description}</p>
+                    <span className="inline-flex items-center text-green-600 font-medium">
+                      Learn More
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Integration Highlight Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="md:w-1/2">
+              <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold tracking-wide mb-3">
+                SEAMLESS INTEGRATION
+              </span>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Connected Features for Maximum Impact</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Our platform integrates all features to provide a comprehensive solution. Check your device's health with our diagnostics tool, find matching recipients through our smart algorithm, and track the environmental impact of your contribution.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link to="/diagnostics">
+                  <Button variant="outline" className="border-blue-500 text-blue-600 hover:bg-blue-50">
+                    Start with Diagnostics
+                  </Button>
+                </Link>
+                <Link to="/impact">
+                  <Button variant="outline" className="border-green-500 text-green-600 hover:bg-green-50">
+                    Calculate Your Impact
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="md:w-1/2 mt-8 md:mt-0">
+              <div className="bg-gray-100 p-6 rounded-lg">
+                <img 
+                  src="https://placehold.co/600x400/e2e8f0/475569?text=Integration+Diagram" 
+                  alt="Feature Integration Diagram" 
+                  className="rounded shadow-md"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Impact Section with Enhanced Design */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Impact</h2>

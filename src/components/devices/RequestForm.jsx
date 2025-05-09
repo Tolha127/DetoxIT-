@@ -42,9 +42,8 @@ const RequestForm = () => {
   };
 
   return (
-    <div className="pt-12">
-      {/* Header with gradient */}
-      <div className="w-full bg-gradient-to-r from-green-500 to-blue-500 py-12 mb-8">
+    <div className="pt-12">      {/* Header with gradient */}
+      <div className="w-full bg-gradient-to-r from-teal-500 to-blue-500 py-12 mb-8 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h1 className="text-3xl font-bold mb-4">Request a Device</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -61,11 +60,10 @@ const RequestForm = () => {
           <label className="block text-sm font-medium text-gray-700">
             Device Type
           </label>
-          <select
-            name="deviceType"
+          <select            name="deviceType"
             value={formData.deviceType}
             onChange={handleChange}
-            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md"
+            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm rounded-md"
             required
           >
             <option value="">Select a device type</option>
@@ -81,26 +79,24 @@ const RequestForm = () => {
           <label className="block text-sm font-medium text-gray-700">
             Preferred Brand (Optional)
           </label>
-          <input
-            type="text"
+          <input            type="text"
             name="preferredBrand"
             value={formData.preferredBrand}
             onChange={handleChange}
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
+            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
           />
         </div>
 
         <div>
           <label className="block text-sm font-medium text-gray-700">
             Budget Range (Optional)
-          </label>
-          <input
+          </label>          <input
             type="text"
             name="budget"
             value={formData.budget}
             onChange={handleChange}
             placeholder="e.g., $200-$500"
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
+            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
           />
         </div>
 
@@ -108,12 +104,11 @@ const RequestForm = () => {
           <label className="block text-sm font-medium text-gray-700">
             Intended Purpose
           </label>
-          <textarea
-            name="purpose"
+          <textarea            name="purpose"
             value={formData.purpose}
             onChange={handleChange}
             rows={3}
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
+            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
             placeholder="Please describe how you plan to use this device..."
             required
           />
@@ -123,12 +118,11 @@ const RequestForm = () => {
           <label className="block text-sm font-medium text-gray-700">
             Required Specifications
           </label>
-          <textarea
-            name="specifications"
+          <textarea            name="specifications"
             value={formData.specifications}
             onChange={handleChange}
             rows={4}
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 sm:text-sm"
+            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
             placeholder="List any specific requirements (e.g., minimum RAM, storage, processor speed)..."
             required
           />
@@ -138,11 +132,10 @@ const RequestForm = () => {
           <label className="block text-sm font-medium text-gray-700">
             Urgency Level
           </label>
-          <select
-            name="urgency"
+          <select            name="urgency"
             value={formData.urgency}
             onChange={handleChange}
-            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md"
+            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm rounded-md"
           >
             {urgencyLevels.map((level) => (
               <option key={level.value} value={level.value}>

@@ -40,11 +40,10 @@ const Login = () => {
       [e.target.name]: e.target.value,
     });
   };
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 pt-12">
       {/* Header with gradient */}
-      <div className="w-full bg-gradient-to-r from-green-500 to-blue-500 p-8 mb-6">
+      <div className="w-full bg-gradient-to-r from-teal-500 to-blue-500 p-8 mb-6 shadow-md">
         <div className="max-w-md mx-auto text-center text-white">
           <h1 className="text-3xl font-bold">Welcome Back to DetoxIT</h1>
           <p className="mt-2">Sign in to continue your recycling journey</p>
@@ -76,8 +75,7 @@ const Login = () => {
                   id="email"
                   name="email"
                   type="email"
-                  required
-                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                  required                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                   placeholder="you@example.com"
                   value={formData.email}
                   onChange={handleChange}
@@ -98,8 +96,7 @@ const Login = () => {
                   id="password"
                   name="password"
                   type="password"
-                  required
-                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                  required                  className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                   placeholder="••••••••"
                   value={formData.password}
                   onChange={handleChange}
@@ -108,12 +105,11 @@ const Login = () => {
             </div>
 
             <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <input
+              <div className="flex items-center">                <input
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded"
                 />
                 <label
                   htmlFor="remember-me"
@@ -121,12 +117,10 @@ const Login = () => {
                 >
                   Remember me
                 </label>
-              </div>
-
-              <div className="text-sm">
+              </div>              <div className="text-sm">
                 <Link
                   to="/forgot-password"
-                  className="font-medium text-green-600 hover:text-green-500"
+                  className="font-medium text-teal-600 hover:text-teal-500"
                 >
                   Forgot your password?
                 </Link>
@@ -147,10 +141,9 @@ const Login = () => {
 
           <div className="flex items-center justify-center mt-6">
             <p className="text-sm text-gray-600">
-              Don't have an account?{' '}
-              <Link
+              Don't have an account?{' '}              <Link
                 to="/signup"
-                className="font-medium text-green-600 hover:text-green-500"
+                className="font-medium text-teal-600 hover:text-teal-500"
               >
                 Sign up
               </Link>
@@ -160,12 +153,11 @@ const Login = () => {
         
         <div className="px-8 py-4 bg-gray-50 border-t border-gray-100 text-center">
           <p className="text-xs text-gray-600">
-            By signing in, you agree to our{' '}
-            <a href="#" className="font-medium text-green-600 hover:text-green-500">
+            By signing in, you agree to our{' '}            <a href="#" className="font-medium text-teal-600 hover:text-teal-500">
               Terms of Service
             </a>{' '}
             and{' '}
-            <a href="#" className="font-medium text-green-600 hover:text-green-500">
+            <a href="#" className="font-medium text-teal-600 hover:text-teal-500">
               Privacy Policy
             </a>
           </p>
